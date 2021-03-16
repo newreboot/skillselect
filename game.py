@@ -93,7 +93,7 @@ class GameWindow(ui.ScriptWindow):
 		self.pressNumber = None
 
 		if app.ENABLE_SKILL_SELECT_FEATURE:
-   				self.skillSelect = Object()
+   				self.skillSelect = None
 
 		self.guildWarQuestionDialog = None
 		self.interface = None
@@ -151,9 +151,6 @@ class GameWindow(ui.ScriptWindow):
 		player.SetGameWindow(0)
 		net.ClearPhaseWindow(net.PHASE_WINDOW_GAME, self)
 		ui.ScriptWindow.__del__(self)
-		
-	def init(self):
-   		self.skillSelect = None
 
 	def Open(self):
 		app.SetFrameSkip(1)
